@@ -68,3 +68,14 @@ Note: Chainer and TensorFlow v1 versions have been removed but can be found prio
 
 - Some module are built with numpy 1.x , so we can not use numpy2.
     - The maximum version of NumPy 1.x compatible with Python 3.10 is NumPy 1.24.x. (not 1.25.x)
+
+- Install pytorch for Mac M-series
+    - arm 64 python
+    - check 
+    ```python
+    import torch 
+
+    print(torch.backends.mps.is_available()) 
+    print(torch.backends.mps.is_built())
+    ```
+
