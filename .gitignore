@@ -12,3 +12,5 @@ checkpoints/
 .idea/
 
 alphaZeroEnv/
+
+*.swp
