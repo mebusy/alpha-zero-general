@@ -62,3 +62,9 @@ Some extensions have been implented [here](https://github.com/kevaday/alphazero-
 * [Plamen Totev](https://github.com/plamentotev) contributed Go Text Protocol player for Othello.
 
 Note: Chainer and TensorFlow v1 versions have been removed but can be found prior to commit [2ad461c](https://github.com/suragnair/alpha-zero-general/tree/2ad461c393ecf446e76f6694b613e394b8eb652f).
+
+
+### NOTES
+
+- Some module are built with numpy 1.x , so we can not use numpy2.
+    - The maximum version of NumPy 1.x compatible with Python 3.10 is NumPy 1.24.x. (not 1.25.x)

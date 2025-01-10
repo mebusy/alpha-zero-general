@@ -1,3 +1,5 @@
+#!python
+
 import logging
 
 import coloredlogs
@@ -6,6 +8,13 @@ from Coach import Coach
 from othello.OthelloGame import OthelloGame as Game
 from othello.pytorch.NNet import NNetWrapper as nn
 from utils import *
+
+# check python version, if not 3.10, then exit
+import sys
+if (sys.version_info.major, sys.version_info.minor ) < (3, 10):
+    sys.exit("Please use Python 3.10 to run this program")
+    sys.exit(1)
+
 
 log = logging.getLogger(__name__)
 
@@ -23,7 +32,7 @@ args = dotdict({
 
     'checkpoint': './temp/',
     'load_model': False,
-    'load_folder_file': ('/dev/models/8x100x50','best.pth.tar'),
+    'load_folder_file': ('./models/8x100x50','best.pth.tar'),
     'numItersForTrainExamplesHistory': 20,
 
 })
