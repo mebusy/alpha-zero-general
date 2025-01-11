@@ -119,14 +119,16 @@ class NNetWrapper(NeuralNet):
                 )
             )
             os.mkdir(folder)
-        else:
-            print("Checkpoint Directory exists! ")
+        # else:
+        #     print("Checkpoint Directory exists! ")
+
         torch.save(
             {
                 "state_dict": self.nnet.state_dict(),
             },
             filepath,
         )
+        print("checkpoit saved to {}".format(filepath))
 
     def load_checkpoint(self, folder="checkpoint", filename="checkpoint.pth.tar"):
         # https://github.com/pytorch/examples/blob/master/imagenet/main.py#L98
